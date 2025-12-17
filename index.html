@@ -120,7 +120,7 @@
   './image24.jpg',
   './image25.jpg',
   './image26.jpg',
-  './image27.jpg'
+  './image27.jpg']
 ;
         const photoTextures = [];
         photoFiles.forEach((f, i) => photoTextures[i] = loader.load(f));
@@ -495,7 +495,7 @@ function createPhotos() {
             } else if (state === 'EXPLODE') {
                 titleMesh.visible = false; starMesh.visible = false; loveMesh.visible = false;
                 const baseAngle = groupGold.rotation.y; 
-                const angleStep = (Math.PI * 2) / 5;
+                const angleStep = (Math.PI * 2) / photoMeshes.length;
                 let bestIdx = 0; let maxZ = -999;
                 photoMeshes.forEach((mesh, i) => {
                     mesh.visible = true;
